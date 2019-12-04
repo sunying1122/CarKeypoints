@@ -25,9 +25,15 @@ Download the pre-trained model [here](https://www.dropbox.com/s/qezt3e02j4uawov/
 
 To perform inference on a set of images, first edit `valid.txt` and add paths to the images you need to run inference on. **These images must only contain cropped car bounding boxes** (i.e., from any image that contains a car, pick only one car bounding box and crop the region of the image contained within that bounding box). These are the only kind of images the model has been trained on.
 
-Then, run the inference script.
+Second, buid the docker image under the CarKeypoints path
 ```
-inference.lua
+docker build -t carkeypoint .
+```
+Third, check the path of data_file, model_file and results_file in `inference.lua`
+
+Then, using test.sh run the inference script.
+```
+sh test.sh
 ```
 
 This will write a `results.txt` file (you can edit the name and path of this output file in `inference.lua`).
