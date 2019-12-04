@@ -7,11 +7,11 @@ require 'valeval.lua'
 
 
 -- File to read image paths from
-data_file = '/absolute/path/to/valid.txt'
+data_file = '/code/valid.txt'
 -- Pretrained model weights
-model_file = '/absolute/path/to/model.t7'
+model_file = '/code/model.t7'
 -- This file is where results get written to
-results_file = '/absolute/path/to/results.txt'
+results_file = '/code/results.txt'
 
 
 function get_predictions(heat_maps)
